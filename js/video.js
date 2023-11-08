@@ -1,4 +1,4 @@
-var video;
+var video = document.querySelector("video");
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
 
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
+    video.play();
 });
 
 document.querySelector("#pause").addEventListener("click", function () {
