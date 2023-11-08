@@ -2,30 +2,26 @@ var video;
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
-
-});
-
-// document.querySelector("#play").addEventListener("click", function() {
-// 	console.log("Play Video");
-// });
-
-window.addEventListener("load", function() {
-    video = document.getElementById("player1");
-
     video.autoplay = false;
-
     video.loop = false;
-
-    console.log("Video initialized. Autoplay and looping are disabled.");
 });
 
-document.getElementById("play").addEventListener("click", function () {
-	video.play();
-	
-	var volumeInfo = document.getElementById("volume");
-	volumeInfo.textContent = video.volume * 100 + "%";
+document.querySelector("#play").addEventListener("click", function() {
+	console.log("Play Video");
 });
 
-document.getElementById("pause").addEventListener("click", function () {
+document.querySelector("#pause").addEventListener("click", function () {
+    console.log("Pause Video");
     video.pause();
+});
+
+document.querySelector("#menu").addEventListener("click", function () {
+    console.log("Video Muted");
+    video.muted = true;
+    slider.min = true;
+});
+
+document.querySelector("#vintage").addEventListener("click", function () {
+    console.log("Old School!");
+    document.querySelector("#vintage").innerHTML;
 });
